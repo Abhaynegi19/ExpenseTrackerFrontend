@@ -30,15 +30,6 @@ const Navbar = () => {
 
       </div>
 
-      {/* Center */}
-      <div className="hidden lg:flex w-1/3">
-        <input
-          type="text"
-          placeholder="🔍 Search transactions..."
-          className="w-full rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-        />
-      </div>
-
       {/* Right */}
       <div className="flex items-center gap-5">
 
