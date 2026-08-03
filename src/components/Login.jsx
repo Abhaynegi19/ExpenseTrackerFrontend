@@ -102,11 +102,13 @@ const Login = () => {
       }
 
       if (data.success) {
-        nav("/dashboard")
         await getUserData()
         await getTransactionSummary()
         await recentTransaction()
+
         toast.success(`Welcome ,${userInfo?.username || `User`} `)
+        
+        nav("/dashboard")
       }
       else{
         toast.error(data.error)
