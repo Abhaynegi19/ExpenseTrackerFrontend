@@ -130,7 +130,6 @@ const App = () => {
       recentTransaction()
   },[transactions.recent])
 
-  console.log(import.meta.env.VITE_BACKEND_URL);
   return (
     <div>
       <Toaster />
