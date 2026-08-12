@@ -94,7 +94,11 @@ const Login = () => {
           credentials: "include",
         }
       );
-
+      setUserInfo({
+        username : "",
+        email : "",
+        password : ""
+      })
       const data = await res.json();
 
       
@@ -135,6 +139,7 @@ const Login = () => {
             <input
               id="ip-email"
               type="text"
+              value ={userInfo.email || userInfo.username}
               placeholder="Enter your email or username"
               className="h-12 w-full px-4 border border-slate-300 rounded-xl outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
               onChange={(e) => {
@@ -167,6 +172,7 @@ const Login = () => {
             <input
               id="ip-password"
               type="password"
+              value ={userInfo.password}
               placeholder="Enter your password"
               className="h-12 px-4 border border-slate-300 rounded-xl outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
               onChange={(e) => {
