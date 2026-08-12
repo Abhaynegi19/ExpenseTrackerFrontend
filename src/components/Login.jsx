@@ -110,8 +110,8 @@ const Login = () => {
       if(data?.info?.isCompleted == false){
         nav("/setProfile")
       }
-    } catch (error) {
-      toast.error(error)
+    } catch (message) {
+      toast.error(message)
     }
   }
 
