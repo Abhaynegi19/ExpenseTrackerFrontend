@@ -107,9 +107,6 @@ const Login = () => {
         
         nav("/dashboard")
       }
-      else{
-        toast.error(data.error)
-      }
       if(data?.info?.isCompleted == false){
         nav("/setProfile")
       }
