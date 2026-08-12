@@ -101,7 +101,6 @@ const Login = () => {
       })
       const data = await res.json();
 
-      
       if (data.success) {
         await getUserData()
         await getTransactionSummary()
@@ -111,10 +110,13 @@ const Login = () => {
         
         nav("/dashboard")
       }
+      else if(!data.success){
+        toast.error(data.message)
+      }
       if(data?.info?.isCompleted == false){
         nav("/setProfile")
       }
-    } catch (message) {
+    } catch(message){
       toast.error(message)
     }
   }
