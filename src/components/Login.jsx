@@ -97,21 +97,21 @@ const Login = () => {
 
       const data = await res.json();
 
-      if(data.info.isCompleted == false){
-        nav("/setProfile")
-      }
-
+      
       if (data.success) {
         await getUserData()
         await getTransactionSummary()
         await recentTransaction()
-
+        
         toast.success(`Welcome ,${userInfo?.username || `User`} `)
         
         nav("/dashboard")
       }
       else{
         toast.error(data.error)
+      }
+      if(data?.info?.isCompleted == false){
+        nav("/setProfile")
       }
     } catch (error) {
       toast.error(error)
